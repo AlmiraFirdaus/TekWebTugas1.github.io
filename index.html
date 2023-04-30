@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tugas1</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Registration</h1>
+
+    <div style="border: 2px solid #000; align-items: center; margin: 100px; margin-top: 10px; padding-bottom: 30px">
+      <form name="TableForm" onsubmit="registrasi()" style="text-align: center">
+        <table style="display: inline">
+          <tr>
+            <td><h2>Nama</h2></td>
+            <td><input type="text" name="Name" placeholder="name" /></td>
+          </tr>
+          <tr>
+            <td><h2>Username</h2></td>
+            <td><input type="text" name="Username" placeholder="username" /></td>
+          </tr>
+          <tr>
+            <td><h2>Email</h2></td>
+            <td><input type="email" name="Email" placeholder="email" /></td>
+          </tr>
+          <tr>
+            <td><h2>Password</h2></td>
+            <td><input type="password" name="Password" placeholder="Confirm your password" /></td>
+          </tr>
+          <tr>
+            <td><h2>Phone Number</h2></td>
+            <td><input type="text" name="Phonenumber" placeholder="Phone" /></td>
+          </tr>
+          <tr>
+            <td><h2>Gender</h2></td>
+            <td>
+              <select name="gender">
+                <option value="boy">Laki - laki</option>
+                <option value="girl">Perempuan</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><h2>Your Website</h2></td>
+            <td><input type="text" name="website" placeholder="link website" /> <input type="submit" name="kirim" value="submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div>
+      <script type="text/javascript">
+        function registrasi() {
+          var TableForm = document.forms["TableForm"];
+          var Name = formulir.elements["Name"].value;
+          var Username = formulir.elements["Username"].value;
+          var Email = formulir.elements["Email"].value;
+          var Password = formulir.elements["Password"].value;
+          var Phonenumber = formulir.elements["Phonenumber"].value;
+          var Gender = formulir.elements["Gender"].value;
+          var Website = formulir.elements["Website"].value;
+
+          if (Name == "") {
+            alert("Your name please");
+          } else if (Phonenumber == "") {
+            alert("you must input your Phonenumber");
+          } else if (username == "") {
+            alert("username must filled");
+          } else if (Email == "" || formulir.Email.value.indexOf("@", 0, ".") == -1) {
+            alert("Enter your email");
+          } else if (Password == "") {
+            alert("Confirm your Password");
+          } else {
+            alert("Data lengkap");
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("text").value;
+  }
+</script>

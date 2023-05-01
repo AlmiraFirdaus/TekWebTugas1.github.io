@@ -7,7 +7,7 @@
     <h1 style="text-align: center">Registration</h1>
 
     <div style="border: 2px solid #000; align-items: center; margin: 100px; margin-top: 10px; padding-bottom: 30px">
-      <form name="TableForm" onsubmit="registrasi()" style="text-align: center">
+      <form name="formulir" onsubmit="registrasi(event)" style="text-align: center">
         <table style="display: inline">
           <tr>
             <td><h2>Nama</h2></td>
@@ -47,33 +47,34 @@
     </div>
 
     <div>
-      <script type="text/javascript">
-        function registrasi() {
-          var TableForm = document.forms["TableForm"];
-          var Name = formulir.elements["Name"].value;
-          var Username = formulir.elements["Username"].value;
-          var Email = formulir.elements["Email"].value;
-          var Password = formulir.elements["Password"].value;
-          var Phonenumber = formulir.elements["Phonenumber"].value;
-          var Gender = formulir.elements["Gender"].value;
-          var Website = formulir.elements["Website"].value;
+  <script type="text/javascript">
+    function registrasi(event) {
+      event.preventDefault();
+      var Name = formulir.elements["Name"].value;
+      var Username = formulir.elements["Username"].value;
+      var Email = formulir.elements["Email"].value;
+      var Password = formulir.elements["Password"].value;
+      var Phonenumber = formulir.elements["Phonenumber"].value;
+      var Gender = formulir.elements["gender"].value;
+      var Website = formulir.elements["website"].value;
 
-          if (Name == "") {
-            alert("Your name please");
-          } else if (Phonenumber == "") {
-            alert("you must input your Phonenumber");
-          } else if (username == "") {
-            alert("username must filled");
-          } else if (Email == "" || formulir.Email.value.indexOf("@", 0, ".") == -1) {
-            alert("Enter your email");
-          } else if (Password == "") {
-            alert("Confirm your Password");
-          } else {
-            alert("Data lengkap");
-          }
-        }
-      </script>
-    </div>
+      if (Name == "") {
+        alert("Your name please");
+      } else if (Phonenumber == "") {
+        alert("you must input your Phonenumber");
+      } else if (Username == "") {
+        alert("username must filled");
+      } else if (Email == "" || formulir.Email.value.indexOf("@") < 0) {
+        alert("Enter your email");
+      } else if (Password == "") {
+        alert("Confirm your Password");
+      } else {
+        alert("Data lengkap");
+      }
+    }
+  </script>
+</div>
+
   </body>
 </html>
 
